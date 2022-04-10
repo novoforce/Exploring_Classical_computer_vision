@@ -80,7 +80,7 @@ def check_answers(answers,ANSWER_KEY):
 
 
 if __name__ == '__main__': 
-    imgp= r'images/test_06.png'
+    imgp= r'images/test_05.png'
     image = cv2.cvtColor(cv2.imread(imgp),cv2.COLOR_BGR2RGB)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     ANSWER_KEY = {0: 1, 1: 4, 2: 0, 3: 3, 4: 1}

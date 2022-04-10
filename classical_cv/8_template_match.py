@@ -40,7 +40,7 @@ def template_match_multi(image,template):
     for pt in zip(*loc): 
         print(pt)
         cv2.rectangle(image, pt[::-1], (pt[1] + w, pt[0] + h), (0,0, 255), 1)
-        display(image)
+    display(image)
 
 
 
@@ -48,14 +48,14 @@ def template_match_multi(image,template):
 
 
 if __name__ == '__main__':
-    full = cv2.imread(r'D:\Exploring-Tensorflow\classical_cv\images\sammy.jpg')
-    full = cv2.cvtColor(full, cv2.COLOR_BGR2RGB)
-    face= cv2.imread(r'D:\Exploring-Tensorflow\classical_cv\images\sammy_face.jpg')
-    face = cv2.cvtColor(face, cv2.COLOR_BGR2RGB)
+    # full = cv2.imread(r'D:\Exploring_Classical_computer_vision\classical_cv\images\sammy.jpg')
+    # full = cv2.cvtColor(full, cv2.COLOR_BGR2RGB)
+    # face= cv2.imread(r'D:\Exploring_Classical_computer_vision\classical_cv\images\sammy_face.jpg')
+    # face = cv2.cvtColor(face, cv2.COLOR_BGR2RGB)
     # template_match(full,face)
 
     #another example
-    img_rgb = cv2.cvtColor(cv2.imread(f'D:\Exploring-Tensorflow\classical_cv\images\hearts.png'), cv2.COLOR_BGR2RGB)
-    template = cv2.imread(f'D:\Exploring-Tensorflow\classical_cv\images\hearts_template.png',0)
+    img_rgb = cv2.cvtColor(cv2.imread(f'D:\Exploring_Classical_computer_vision\classical_cv\images\hearts.png'), cv2.COLOR_BGR2RGB)
+    template = cv2.imread(f'D:\Exploring_Classical_computer_vision\classical_cv\images\hearts_template.png',0)
 
     template_match_multi(img_rgb,template)

@@ -59,12 +59,12 @@ def sobelx_plus_sobely(img):
 
 
 if __name__ == '__main__':
-    img_path= r'D:\Exploring-Tensorflow\classical_cv\images\sudoku.jpg'
+    img_path= r'D:\Exploring_Classical_computer_vision\classical_cv\images\sudoku.jpg'
     img= cv2.imread(img_path,0) #grayscale image
     display(img)
-    # sobel_x(img)
-    # sobel_y(img)
-    # laplacian(img)
+    sobel_x(img)
+    sobel_y(img)
+    laplacian(img)
 
     #combining the sobelx and sobely
-    sobelx_plus_sobely(img)
+    # sobelx_plus_sobely(img)
