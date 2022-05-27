@@ -34,11 +34,12 @@ def template_match_multi(image,template):
     res = cv2.matchTemplate(img_gray, template, cv2.TM_CCOEFF_NORMED)
     # display(res)
     # print("***>",res.shape,len(res),type(res),res)
-    threshold = 0.99 #heuristic
-    loc = np.where( res >= threshold) #filter
+    threshold = 0.99#heuristic
+    loc = np.where(res >= threshold) #filter
     # print("***>",type(loc),loc,*loc)
+
     for pt in zip(*loc): 
-        print(pt)
+        # print(pt)
         cv2.rectangle(image, pt[::-1], (pt[1] + w, pt[0] + h), (0,0, 255), 1)
     display(image)
 
@@ -56,6 +57,6 @@ if __name__ == '__main__':
 
     #another example
     img_rgb = cv2.cvtColor(cv2.imread(f'D:\Exploring_Classical_computer_vision\classical_cv\images\hearts.png'), cv2.COLOR_BGR2RGB)
-    template = cv2.imread(f'D:\Exploring_Classical_computer_vision\classical_cv\images\hearts_template.png',0)
+    template = cv2.imread(r'D:\Exploring_Classical_computer_vision\classical_cv\images\hearts_template.png',0)
 
     template_match_multi(img_rgb,template)

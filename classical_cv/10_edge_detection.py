@@ -10,7 +10,7 @@ def display(img, mapp='gray'):
     plt.show()
 
 def canny_edge(image):
-    edges = cv2.Canny(image=img, threshold1=127, threshold2=127)
+    edges = cv2.Canny(image=img, threshold1=50, threshold2=127) #(lower bound) and (upper bound)
     display(edges)
 
 def canny_edge_blur(image):
@@ -25,7 +25,7 @@ def canny_slider():
     img = cv2.imread(r'images/sammy_face.jpg', 0) #read image as grayscale
 
 
-    canny = cv2.Canny(img, 85, 255) 
+    canny = cv2.Canny(img, 243, 255) 
 
     cv2.namedWindow('image') # make a window with name 'image'
     cv2.createTrackbar('L', 'image', 0, 255, callback) #lower threshold trackbar for window 'image
@@ -53,9 +53,9 @@ if __name__ == '__main__':
     imgp= r'images/sammy_face.jpg'
     img= cv2.imread(imgp)
 
-    # canny_edge(img)
+    canny_edge(img)
 
-    # canny_edge_blur(img)
+    canny_edge_blur(img)
 
     canny_slider()
 
